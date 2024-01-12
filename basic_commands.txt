@@ -1,12 +1,167 @@
-List all files with details in the directory : ls
+					1)List all files with details in the directory : "ls"
+
+o/p:
+Canopas  Documents  Music     Public  Templates
+Desktop  Downloads  Pictures  snap    Videos
+
+					2)Give only read permission to any file : "chmod -r filename"
+
+					3)Give all read and write permissions to any file :"chmod -R 777 me"
+
+					4)Get the IP address of your own pc : "hostname -I" / "ifconfig"
+
+o/p: 192.168.29.9 172.17.0.1 2405:201:200d:209c:1ba4:e9a8:675b:dab5 2405:201:200d:209c:1d37:2edd:e008:2848
+
+o/p-2: docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:1f:bb:20:4a  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.29.9  netmask 255.255.255.0  broadcast 192.168.29.255
+        inet6 2405:201:200d:209c:1d37:2edd:e008:2848  prefixlen 64  scopeid 0x0<global>
+        inet6 2405:201:200d:209c:1ba4:e9a8:675b:dab5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3d3b:def5:5371:be74  prefixlen 64  scopeid 0x20<link>
+        ether e0:d5:5e:ee:f4:42  txqueuelen 1000  (Ethernet)
+        RX packets 1082216  bytes 1302285984 (1.3 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 454582  bytes 95995770 (95.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 28356  bytes 3175448 (3.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28356  bytes 3175448 (3.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+						5) Observe disk space usage: "df -T" / "df -h"
+
+o/p :
+Filesystem     Type  1K-blocks     Used Available Use% Mounted on
+tmpfs          tmpfs   1605328     2092   1603236   1% /run
+/dev/sda2      ext4  238798492 30308864 196289592  14% /
+tmpfs          tmpfs   8026628   170260   7856368   3% /dev/shm
+tmpfs          tmpfs      5120        4      5116   1% /run/lock
+/dev/sda1      vfat     523244     6220    517024   2% /boot/efi
+tmpfs          tmpfs   1605324    16908   1588416   2% /run/user/1000
+
+o/p-2:
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.6G  2.1M  1.6G   1% /run
+/dev/sda2       228G   29G  188G  14% /
+tmpfs           7.7G  167M  7.5G   3% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda1       511M  6.1M  505M   2% /boot/efi
+tmpfs           1.6G   17M  1.6G   2% /run/user/1000
+
+
+					6) View previously executed commands history : "history / Ctrl + R (reverse search)"
+
+o/p: 
+    1  ls
+    2  chmod -r filename
+    3  chmod -r me
+    4  cd Canopas/
+    5  chmod -r me
+    6  chmod -rwx me
+    7  sudo chmod -rwx me
+    8  sudo chmod -r me
+    9  sudo chmod -rwx me
+   10  chmod -R 777 me
+   11  chmod -r me
+   12  chmod -R 777 me
+   13  hostname -I
+   14  ifconfig
+   15  df -T
+   16  df -h
+   17  history
+   
+   
+   
+					7)Linux command to install/uninstall PHP : "sudo apt install php (install) // sudo apt-get purge php* (for uninstall)"
 
 o/p:
 
+Creating config file /etc/php/8.1/cli/php.ini with new version
+Setting up libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...
 
-chmod -r filename
-chmod -rwx filename
-ip a/ifconfig
-df -T/ df -h
-history / Ctrl + R (reverse search)
-sudo apt install php (install) // sudo apt-get purge php* (for uninstall)
+Creating config file /etc/php/8.1/apache2/php.ini with new version
+apache2_invoke: Enable module php8.1
+Setting up php8.1 (8.1.2-1ubuntu2.14) ...
+Setting up php (2:8.1+92ubuntu1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for php8.1-cli (8.1.2-1ubuntu2.14) ...
+Processing triggers for libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...
 
+o/p(uninstall) :
+
+Purging configuration files for php8.1-cli (8.1.2-1ubuntu2.14) ...
+Purging configuration files for php8.1-readline (8.1.2-1ubuntu2.14) ...
+Purging configuration files for libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...
+apache2_invoke postrm: Purging state for php8.1
+dpkg: warning: while removing libapache2-mod-php8.1, directory '/etc/php/8.1' not empty so not removed
+Purging configuration files for php8.1-opcache (8.1.2-1ubuntu2.14) ...
+
+
+
+					8) Linux command to start/stop mysql service :  sudo systemctl start mysql.service // sudo systemctl stop mysql.service
+
+  i) sudo apt-get install mysql-server
+  ii) sudo systemctl start mysql.service
+  iii) sudo service mysql status
+  iv) sudo systemctl stop mysql.service
+  iv) sudo service mysql status
+  
+  o/p of status(when sever is running):
+  
+  ● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: active (running) since Fri 2024-01-12 15:33:30 IST; 3min 25s ago
+    Process: 136515 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code>
+   Main PID: 136523 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 18732)
+     Memory: 365.3M
+        CPU: 2.145s
+     CGroup: /system.slice/mysql.service
+             └─136523 /usr/sbin/mysqld
+
+Jan 12 15:33:29 dell systemd[1]: Starting MySQL Community Server...
+Jan 12 15:33:30 dell systemd[1]: Started MySQL Community Server.
+
+  o/p of status(when sever is shutdown) :
+   
+   ○ mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: inactive (dead) since Fri 2024-01-12 15:37:29 IST; 3s ago
+    Process: 136515 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code>
+    Process: 136523 ExecStart=/usr/sbin/mysqld (code=exited, status=0/SUCCESS)
+   Main PID: 136523 (code=exited, status=0/SUCCESS)
+     Status: "Server shutdown complete"
+        CPU: 2.436s
+
+Jan 12 15:33:29 dell systemd[1]: Starting MySQL Community Server...
+Jan 12 15:33:30 dell systemd[1]: Started MySQL Community Server.
+Jan 12 15:37:28 dell systemd[1]: Stopping MySQL Community Server...
+Jan 12 15:37:29 dell systemd[1]: mysql.service: Deactivated successfully.
+Jan 12 15:37:29 dell systemd[1]: Stopped MySQL Community Server.
+Jan 12 15:37:29 dell systemd[1]: mysql.service: Consumed 2.436s CPU time.
+lines 1-15/15 (END)
+
+
+								9) Write and save any file from terminal : 
+
+steps :
+
+	i) vi filename.txt
+	ii) "i" command for insert
+	iii) write anything 
+	iv) ":wq" for save and exit
+	
