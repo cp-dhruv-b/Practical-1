@@ -1,4 +1,4 @@
-1) Add files to git : 
+								1) Add files to git : 
 	steps:
 	i) git init
 	ii) git add -A
@@ -15,7 +15,7 @@ o/p:
  create mode 100755 me/me
 
 
-2) Check git remotes:   "git ls-remote"
+							2) Check git remotes:   "git ls-remote"
 
 	steps :
 	i) git branch main
@@ -28,7 +28,7 @@ From https://github.com/cp-dhruv-b/Practical-1.git
 e1b0e1ad9489911718ac05b2e496c190a3b0dcb9	HEAD
 e1b0e1ad9489911718ac05b2e496c190a3b0dcb9	refs/heads/main
 
-3) Fetch remote branches : "git fetch origin main"
+							3) Fetch remote branches : "git fetch origin main"
 
 
 o/p:
@@ -37,20 +37,20 @@ From https://github.com/cp-dhruv-b/Practical-1
  * branch            main       -> FETCH_HEAD
  
  
-4) Delete branch : "git branch -d dhruv"
+								4) Delete branch : "git branch -d dhruv"
 
 o/p:
 
 Deleted branch dhruv (was e1b0e1a).
 
-5)Check the git status of the repository : "git status"
+								5)Check the git status of the repository : "git status"
 
 o/p:
 
 On branch main
 nothing to commit, working tree clean
 
-6)Commit new/updated files into a git repository :    git commit -m "added" and git commit -m "update"
+					6)Commit new/updated files into a git repository :    git commit -m "added" and git commit -m "update"
 
 o/p: 
 [master (root-commit) 10340e6] added
@@ -68,7 +68,7 @@ o/p:
  create mode 100644 version-contol.txt
 
 
-7)Push in a git repository : "git push origin main" 
+								7)Push in a git repository : "git push origin main" 
 
 o/p: 
 
@@ -84,11 +84,7 @@ remote: Resolving deltas: 100% (1/1), done.
 To https://github.com/cp-dhruv-b/Practical-1.git
    99f1dd4..e1b0e1a  HEAD -> main
 
-<<<<<<< HEAD
-8)Pull new changes from the repository : "git pull origin main"
-=======
-<<<<<<< HEAD
-8)Pull new changes from the repository : "git pull origin cp-dhruv-b-patch-1"
+						8)Pull new changes from the repository : "git pull origin cp-dhruv-b-patch-1"
 
 o/p:
 
@@ -101,18 +97,73 @@ From https://github.com/cp-dhruv-b/Practical-1
  * branch            cp-dhruv-b-patch-1 -> FETCH_HEAD
  * [new branch]      cp-dhruv-b-patch-1 -> origin/cp-dhruv-b-patch-1
  
- 9)Checkout new branch : "git checkout cp-dhruv-b-patch-1"
+ 							9)Checkout new branch : "git checkout cp-dhruv-b-patch-1"
  
  o/p:
  
 Branch 'cp-dhruv-b-patch-1' set up to track remote branch 'cp-dhruv-b-patch-1' from 'origin'.
 Switched to a new branch 'cp-dhruv-b-patch-1'
 
-10)
+								10)Merge branch into another : "git merge main"
+
+o/p: 
+
+Auto-merging basic_commands.txt
+Already up to date.
+
+								11)See commit history : "git log"
+
+commit ade161eb93b3dc1f16e69cb2674d7af822b583bf (HEAD -> cp-dhruv-b-patch-1)
+Merge: 3be80c4 c52e17c
+Author: Dhruv B <dhruv.b@canopas.com>
+Date:   Fri Jan 12 17:52:21 2024 +0530
+
+    changes in 2 files
+
+commit c52e17c16c87549442722be092a31edc499a5f2c (main)
+Author: Dhruv B <dhruv.b@canopas.com>
+Date:   Fri Jan 12 17:44:54 2024 +0530
+
+    change in repo
+
+commit 3be80c41eac2aa8f568e65f77db7a0e883273b39 (origin/cp-dhruv-b-patch-1)
+Author: Dhruv B <156405571+cp-dhruv-b@users.noreply.github.com>
+Date:   Fri Jan 12 17:40:05 2024 +0530
+
+    change-in-repo
+    
+    for pull request
+
+commit 7ca3b51534f840e7653fbee29937139f42d81aad
+Author: Dhruv B <dhruv.b@canopas.com>
+:
 
 
-=======
-8)Pull new changes from the repository : "git pull origin main"
->>>>>>> main
->>>>>>> tmp
+                                			12)Rebase and Squash :  git rebase --continue //  
+
+o/p(rebase)
+Successfully rebased and updated refs/heads/cp-dhruv-b-patch-1
+
+o/p:
+pick c52e17c change in repo
+pick 93232f0 solving rebase
+
+and 
+Successfully rebased and updated refs/heads/main
+
+                            	 13)Write a command to clone repo : git clone https://github.com/canopas/web-developer-roadmap-2023.git
+
+o/p:
+Cloning into 'web-developer-roadmap-2023'...
+remote: Enumerating objects: 42, done.
+remote: Counting objects: 100% (42/42), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 42 (delta 16), reused 25 (delta 8), pack-reused 0
+Receiving objects: 100% (42/42), 26.13 MiB | 12.71 MiB/s, done.
+Resolving deltas: 100% (16/16), done.
+
+
+
+
+
  
