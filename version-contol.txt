@@ -1,0 +1,46 @@
+1) Add files to git : 
+	
+	i) git init
+	ii) git add -A
+	iii) git commit -m "added"
+	
+	
+o/p: 
+[master (root-commit) 10340e6] added
+ 5 files changed, 17 insertions(+)
+ create mode 100644 basic_commands.txt
+ create mode 100644 me/.demo.txt.swo
+ create mode 100644 me/.demo.txt.swp
+ create mode 100644 me/demo.txt
+ create mode 100755 me/me
+
+
+2) Check git remotes:   "git ls-remote"
+
+	steps :
+	i) git branch main
+	ii) git checkout main
+	iii) git remote add origin https://github.com/cp-dhruv-b/Practical-1.git
+	iv) git ls-remote
+
+o/p:
+From https://github.com/cp-dhruv-b/Practical-1.git
+e1b0e1ad9489911718ac05b2e496c190a3b0dcb9	HEAD
+e1b0e1ad9489911718ac05b2e496c190a3b0dcb9	refs/heads/main
+
+3) Fetch remote branches : "git fetch origin main"
+
+
+o/p:
+
+From https://github.com/cp-dhruv-b/Practical-1
+ * branch            main       -> FETCH_HEAD
+ 
+ 
+4) Delete branch : "git branch -d dhruv"
+
+o/p:
+
+Deleted branch dhruv (was e1b0e1a).
+
+5)
