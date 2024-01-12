@@ -91,6 +91,7 @@ o/p:
 
 Creating config file /etc/php/8.1/cli/php.ini with new version
 Setting up libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...
+<<<<<<< HEAD
 
 Creating config file /etc/php/8.1/apache2/php.ini with new version
 apache2_invoke: Enable module php8.1
@@ -175,4 +176,79 @@ steps :
 
 
 
+=======
 
+Creating config file /etc/php/8.1/apache2/php.ini with new version
+apache2_invoke: Enable module php8.1
+Setting up php8.1 (8.1.2-1ubuntu2.14) ...
+Setting up php (2:8.1+92ubuntu1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for php8.1-cli (8.1.2-1ubuntu2.14) ...
+Processing triggers for libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...
+>>>>>>> tmp
+
+o/p(uninstall) :
+
+Purging configuration files for php8.1-cli (8.1.2-1ubuntu2.14) ...
+Purging configuration files for php8.1-readline (8.1.2-1ubuntu2.14) ...
+Purging configuration files for libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...
+apache2_invoke postrm: Purging state for php8.1
+dpkg: warning: while removing libapache2-mod-php8.1, directory '/etc/php/8.1' not empty so not removed
+Purging configuration files for php8.1-opcache (8.1.2-1ubuntu2.14) ...
+
+
+
+					8) Linux command to start/stop mysql service :  sudo systemctl start mysql.service // sudo systemctl stop mysql.service
+
+  i) sudo apt-get install mysql-server
+  ii) sudo systemctl start mysql.service
+  iii) sudo service mysql status
+  iv) sudo systemctl stop mysql.service
+  iv) sudo service mysql status
+  
+  o/p of status(when sever is running):
+  
+  ● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: active (running) since Fri 2024-01-12 15:33:30 IST; 3min 25s ago
+    Process: 136515 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code>
+   Main PID: 136523 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 18732)
+     Memory: 365.3M
+        CPU: 2.145s
+     CGroup: /system.slice/mysql.service
+             └─136523 /usr/sbin/mysqld
+
+Jan 12 15:33:29 dell systemd[1]: Starting MySQL Community Server...
+Jan 12 15:33:30 dell systemd[1]: Started MySQL Community Server.
+
+  o/p of status(when sever is shutdown) :
+   
+   ○ mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: inactive (dead) since Fri 2024-01-12 15:37:29 IST; 3s ago
+    Process: 136515 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code>
+    Process: 136523 ExecStart=/usr/sbin/mysqld (code=exited, status=0/SUCCESS)
+   Main PID: 136523 (code=exited, status=0/SUCCESS)
+     Status: "Server shutdown complete"
+        CPU: 2.436s
+
+Jan 12 15:33:29 dell systemd[1]: Starting MySQL Community Server...
+Jan 12 15:33:30 dell systemd[1]: Started MySQL Community Server.
+Jan 12 15:37:28 dell systemd[1]: Stopping MySQL Community Server...
+Jan 12 15:37:29 dell systemd[1]: mysql.service: Deactivated successfully.
+Jan 12 15:37:29 dell systemd[1]: Stopped MySQL Community Server.
+Jan 12 15:37:29 dell systemd[1]: mysql.service: Consumed 2.436s CPU time.
+lines 1-15/15 (END)
+
+
+								9) Write and save any file from terminal : 
+
+steps :
+
+	i) vi filename.txt
+	ii) "i" command for insert
+	iii) write anything 
+	iv) ":wq" for save and exit
+	
