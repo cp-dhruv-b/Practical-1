@@ -1,0 +1,12 @@
+List all files with details in the directory : ls
+
+o/p:
+
+
+chmod -r filename
+chmod -rwx filename
+ip a/ifconfig
+df -T/ df -h
+history / Ctrl + R (reverse search)
+sudo apt install php (install) // sudo apt-get purge php* (for uninstall)
+
