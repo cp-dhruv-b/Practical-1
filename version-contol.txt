@@ -1,5 +1,5 @@
 1) Add files to git : 
-	
+	steps:
 	i) git init
 	ii) git add -A
 	iii) git commit -m "added"
@@ -43,4 +43,46 @@ o/p:
 
 Deleted branch dhruv (was e1b0e1a).
 
-5)
+5)Check the git status of the repository : "git status"
+
+o/p:
+
+On branch main
+nothing to commit, working tree clean
+
+6)Commit new/updated files into a git repository :    git commit -m "added" and git commit -m "update"
+
+o/p: 
+[master (root-commit) 10340e6] added
+ 5 files changed, 17 insertions(+)
+ create mode 100644 basic_commands.txt
+ create mode 100644 me/.demo.txt.swo
+ create mode 100644 me/.demo.txt.swp
+ create mode 100644 me/demo.txt
+ create mode 100755 me/me
+ 
+ o/p(update changes):
+ 
+ [main 7ca3b51] update
+ 1 file changed, 46 insertions(+)
+ create mode 100644 version-contol.txt
+
+
+7)Push in a git repository : "git push origin main" 
+
+o/p: 
+
+Username for 'https://github.com': cp-dhruv-b
+Password for 'https://cp-dhruv-b@github.com': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.08 KiB | 555.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/cp-dhruv-b/Practical-1.git
+   99f1dd4..e1b0e1a  HEAD -> main
+
+8)Pull new changes from the repository : "git pull origin main"
+ 
